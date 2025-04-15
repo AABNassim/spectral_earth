@@ -1,0 +1,30 @@
+# @package _global_
+
+defaults:
+  - override /data: enmap_corine.yaml
+  - override /model: multilabel_classif.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: ddp.yaml
+  - override /logger: wandb.yaml  
+
+protocol: null
+
+experiment_setup: corine
+
+seed: 12345
+
+data:
+  batch_size: 32
+
+model:
+  num_classes: 19
+
+trainer:
+  max_epochs: 100
+
+weight_init: random
+
+tags: [ "downstream", "enmap", "corine", "classification"]
+
+task_name: downstream/${experiment_setup}/${model.backbone}/${protocol}/${weight_init}
+

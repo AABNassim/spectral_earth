@@ -1,0 +1,9 @@
+# @package _global_
+defaults:
+  - pretrain/mae/base.yaml  
+
+model:
+  backbone_name: spec_vit_small
+  token_patch_size: 4
+
+tags: [ "pretrain", "mae", "enmap", "spec_vit_small" ]

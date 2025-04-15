@@ -1,0 +1,32 @@
+# @package _global_
+
+defaults:
+  - override /data: eo1_cdl.yaml
+  - override /model: segmentation.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: ddp.yaml
+  - override /logger: wandb.yaml  
+
+protocol: null
+
+experiment_setup: eo1_cdl
+
+seed: 12345
+
+data:
+  batch_size: 8
+
+model:
+  num_classes: 14
+  ignore_index: 14
+  in_channels: 198
+
+trainer:
+  max_epochs: 100
+  devices: 2
+
+weight_init: random
+
+tags: [ "downstream", "eo1", "cdl", "segmentation"]
+
+task_name: downstream/${experiment_setup}/${model.backbone}/${protocol}/${weight_init}

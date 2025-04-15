@@ -1,0 +1,31 @@
+# @package _global_
+
+defaults:
+  - override /data: enmap_bnetd.yaml
+  - override /model: segmentation.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: ddp.yaml
+  - override /logger: wandb.yaml  
+
+protocol: null
+
+experiment_setup: bnetd
+
+seed: 12345
+
+data:
+  batch_size: 16
+
+model:
+  num_classes: 10
+  ignore_index: 10
+
+trainer:
+  max_epochs: 100
+
+weight_init: random
+
+tags: [ "downstream", "enmap", "bnetd", "segmentation"]
+
+task_name: downstream/${experiment_setup}/${model.backbone}/${protocol}/${weight_init}
+

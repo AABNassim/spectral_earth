@@ -1,0 +1,9 @@
+_target_: src.datamodules.enmap_bnetd.EnMAPBNETDDataModule
+root: ${paths.data_dir}/enmap_bnetd/
+sensor: "enmap"
+classes: [0, 1, 2, 3, 6, 9, 10, 13, 15, 16, 21]
+num_bands: 202
+raw_mask: false
+num_workers: 8
+batch_size: 8
+patch_size: 128

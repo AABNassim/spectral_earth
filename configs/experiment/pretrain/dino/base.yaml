@@ -1,0 +1,36 @@
+# @package _global_
+
+defaults:
+  - override /data: spectral_earth.yaml
+  - override /model: dino.yaml
+  - override /callbacks: self_supervised.yaml
+  - override /trainer: ddp.yaml
+  - override /logger: wandb.yaml
+
+tags: [ "pretrain", "dino", "enmap", "spec_resnet50" ]
+
+seed: 12345
+
+data:
+  batch_size: 64
+  num_bands: 202
+  return_two_views: True
+
+model:
+  backbone_name: spec_resnet50
+  hidden_dim: 2048
+  bottleneck_dim: 256
+  output_dim: 128
+  lr: 0.001
+  warmup_epochs: 20
+  weight_decay: 1e-5
+  momentum: 0.9
+  size: 128
+  multicrop: false
+  n_views: 0
+
+trainer:
+  max_epochs: 100
+
+task_name: ssl_pretrain/enmap/dino/${model.backbone_name}
+

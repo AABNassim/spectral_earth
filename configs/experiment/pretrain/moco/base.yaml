@@ -1,0 +1,36 @@
+# @package _global_
+
+defaults:
+  - override /data: spectral_earth.yaml
+  - override /model: moco.yaml
+  - override /callbacks: self_supervised.yaml
+  - override /trainer: ddp.yaml
+  - override /logger: wandb.yaml
+
+tags: [ "pretrain", "moco", "enmap", "spec_resnet50"]
+
+seed: 12345
+
+data:
+  batch_size: 64
+  num_bands: 202
+  return_two_views: True
+
+model:
+  backbone_name: spec_resnet50
+  token_patch_size: 4
+  freeze_patch_embed: false
+  schedule: [60, 80]
+  lr: 0.001
+  temperature: 0.1
+  weight_decay: 0.0001
+  memory_bank_size: 32768
+  moco_momentum: 0.999
+  momentum: 0.9
+  size: 128
+
+trainer:
+  max_epochs: 100
+
+task_name: ssl_pretrain/enmap/moco/${model.backbone_name}
+

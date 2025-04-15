@@ -1,0 +1,9 @@
+_target_: src.datamodules.enmap_bdforet.EnMAPBDForetDataModule
+root: ${paths.data_dir}/enmap_bdforet/
+sensor: "enmap"
+classes: [0, 1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 14, 16]
+num_bands: 202
+raw_mask: false
+num_workers: 12
+batch_size: 8
+patch_size: 128

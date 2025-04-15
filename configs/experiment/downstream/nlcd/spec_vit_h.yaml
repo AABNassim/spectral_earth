@@ -1,0 +1,12 @@
+# @package _global_
+
+defaults:
+  - downstream/nlcd/base.yaml  
+
+model:
+  seg_model: "conv_head"
+  backbone: "spec_vit_huge"
+  token_patch_size: 4
+  pretrained_weights: null
+  freeze_backbone: true      # Default for linear protocol
+  finetune_adapter: false    # Default for linear protocol

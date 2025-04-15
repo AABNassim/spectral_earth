@@ -1,0 +1,7 @@
+_target_: src.datamodules.hyperview.HyperviewDataModule
+root: ${paths.data_dir}/hyperview/
+data_dir: images
+num_bands: 150
+batch_size: 16
+patch_size: 128
+num_workers: 8

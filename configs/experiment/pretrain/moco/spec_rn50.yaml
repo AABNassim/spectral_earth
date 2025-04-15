@@ -1,0 +1,8 @@
+# @package _global_
+defaults:
+  - pretrain/moco/base.yaml  
+
+model:
+  backbone_name: spec_resnet50
+
+tags: [ "pretrain", "moco", "enmap", "spec_resnet50" ]

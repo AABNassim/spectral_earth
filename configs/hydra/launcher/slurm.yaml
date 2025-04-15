@@ -1,0 +1,11 @@
+defaults: 
+  - submitit_slurm
+  
+submitit_folder: ${hydra.sweep.dir}/.submitit/%j
+timeout_min: 300
+partition: partition_name
+nodes: 1
+tasks_per_node: 4
+cpus_per_task: 16
+gres: gpu:4
+account: account_name

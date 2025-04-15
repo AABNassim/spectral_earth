@@ -1,0 +1,9 @@
+# @package _global_
+defaults:
+  - pretrain/dino/base.yaml  
+
+model:
+  backbone_name: spec_vit_small
+  token_patch_size: 4
+
+tags: [ "pretrain", "dino", "enmap", "spec_vit_small" ]

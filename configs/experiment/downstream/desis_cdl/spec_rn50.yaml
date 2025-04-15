@@ -1,0 +1,11 @@
+# @package _global_
+
+defaults:
+  - downstream/desis_cdl/base.yaml  
+
+model:
+  seg_model: "fcn"
+  backbone: "spec_resnet50"
+  pretrained_weights: null
+  freeze_backbone: true      # Default for linear protocol
+  finetune_adapter: false    # Default for linear protocol

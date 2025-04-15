@@ -1,0 +1,9 @@
+_target_: src.datamodules.enmap_eurocrops.EnMAPEurocropsDataModule
+root: ${paths.data_dir}/enmap_eurocrops/
+sensor: "enmap"
+classes: [0, 3301090205, 3301010600, 3301090303, 3301010800, 3301090301, 3303060000, 3303030600, 3303050000, 3303030100, 3301060500, 3301060300, 3303010000, 3301020000, 3301160000, 3301029900]
+num_bands: 202
+raw_mask: false
+num_workers: 8
+batch_size: 8
+patch_size: 128

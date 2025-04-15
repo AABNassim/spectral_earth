@@ -1,0 +1,9 @@
+_target_: src.models.mae_module.MAEModule
+decoder_dim: 512
+token_patch_size: 4
+in_channels: 202
+mask_ratio: 0.9
+lr: 0.0001
+T_max: ${trainer.max_epochs}
+eta_min: 0
+norm_pix: True

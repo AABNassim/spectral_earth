@@ -1,0 +1,11 @@
+# @package _global_
+
+defaults:
+  - downstream/corine/base.yaml  
+
+model:
+  backbone: "spec_vit_small"
+  token_patch_size: 4
+  pretrained_weights: null
+  freeze_backbone: true      # Default for linear protocol
+  finetune_adapter: false    # Default for linear protocol

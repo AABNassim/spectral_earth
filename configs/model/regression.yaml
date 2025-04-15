@@ -1,0 +1,12 @@
+_target_: src.models.regression_module.RegressionModule
+backbone: "spec_resnet50"
+learning_rate: 1e-3
+weight_decay: 1e-4
+t_max: 100
+pretrained_weights: null
+in_channels: ${data.num_bands}
+num_outputs: 4
+freeze_backbone: False
+mlp_dims: [2048, 1024]
+token_patch_size: 4
+baseline: [0.0, 0.0, 0.0, 0.0]

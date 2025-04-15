@@ -1,0 +1,26 @@
+# @package _global_
+
+defaults:
+  - override /data: spectral_earth.yaml
+  - override /model: mae.yaml
+  - override /callbacks: self_supervised.yaml
+  - override /trainer: ddp.yaml
+  - override /logger: wandb.yaml
+
+tags: [ "pretrain", "dino", "enmap", "spec_vit_s" ]
+
+seed: 12345
+
+data:
+  batch_size: 64
+  num_bands: 202
+  return_two_views: False
+
+model:
+  backbone_name: spec_vit_small
+  T_max: 200
+
+trainer:
+  max_epochs: 200
+
+task_name: ssl_pretrain/enmap/mae/${model.backbone_name}

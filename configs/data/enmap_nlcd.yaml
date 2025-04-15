@@ -1,0 +1,9 @@
+_target_: src.datamodules.enmap_cdl_nlcd.EnMAPCDLNLCDDataModule
+root: ${paths.data_dir}
+sensor: "enmap"
+num_bands: 202
+classes: [0, 11, 21, 22, 23, 24, 31, 41, 42, 43, 52, 71, 81, 82, 90, 95]
+batch_size: 16
+patch_size: 128
+num_workers: 16
+product: "nlcd"

@@ -1,0 +1,31 @@
+# @package _global_
+
+defaults:
+  - override /data: hyperview.yaml
+  - override /model: regression.yaml
+  - override /callbacks: default_with_early_stopping.yaml
+  - override /trainer: ddp_2.yaml
+  - override /logger: wandb.yaml  
+
+protocol: null
+
+experiment_setup: hyperview
+
+seed: 12345
+
+data:
+  batch_size: 32
+
+model:
+  t_max: 400
+  in_channels: 150
+
+trainer:
+  max_epochs: 400
+
+weight_init: random
+
+tags: [ "downstream", "enmap", "hyperview", "regression"]
+
+task_name: downstream/${experiment_setup}/${model.backbone}/${protocol}/${weight_init}
+

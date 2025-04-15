@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Bash scripts
+*.sh
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+*.egg
+*.whl
+dist/
+build/
+pip-wheel-metadata/
+
+# Lightning logs
+lightning_logs/
+*.log
+
+*.ipynb
+*.sh
+experiments/
+srun_outputs/
+tmp/
+figures/
+
+# Pre-trained models
+pretrained_models/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# VS Code files
+.vscode/
+

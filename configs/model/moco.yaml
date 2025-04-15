@@ -1,0 +1,17 @@
+_target_: src.models.moco_module.MoCoModule
+backbone_name: spec_resnet50
+in_channels: ${data.num_bands}
+layers: 2
+hidden_dim: 2048
+output_dim: 128
+lr: 0.06
+weight_decay: 1e-5
+momentum: 0.9
+schedule: [60, 80]
+temperature: 0.1
+memory_bank_size: 32768
+moco_momentum: 0.999
+gather_distributed: True
+size: 128
+token_patch_size: 4
+freeze_patch_embed: False

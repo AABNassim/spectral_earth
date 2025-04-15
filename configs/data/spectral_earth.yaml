@@ -1,0 +1,7 @@
+_target_: src.datamodules.spectral_earth.SpectralEarthDataModule
+root: ${paths.data_dir}
+sensor: "enmap"
+num_bands: 202
+batch_size: 64
+patch_size: 128
+num_workers: 16
