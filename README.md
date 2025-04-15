@@ -40,7 +40,7 @@ We evaluate our pretrained models on a diverse set of downstream tasks including
 
 ![Downstream Tasks Overview](downstream_tasks_overview.png)
 
-*Figure: Overview of downstream tasks across sensors, regions, and task types.*
+*Figure: Overview of downstream tasks provided in SpectralEarth.*
 
 
 ## Pretrained Models
