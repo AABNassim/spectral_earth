@@ -1,5 +1,5 @@
 _target_: src.datamodules.enmap_corine.EnMAPCorineDataModule
-root: ${paths.data_dir}
+root: ${paths.data_dir}/enmap_corine/
 sensor: "enmap"
 num_bands: 202
 num_classes: 19

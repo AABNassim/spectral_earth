@@ -1,5 +1,5 @@
 _target_: src.datamodules.enmap_cdl_nlcd.EnMAPCDLNLCDDataModule
-root: ${paths.data_dir}
+root: ${paths.data_dir}/enmap_cdl/
 sensor: "enmap"
 num_bands: 202
 classes: [0, 1, 2, 3, 4, 5, 6, 45, 54, 69, 72, 75, 76, 204, 210]

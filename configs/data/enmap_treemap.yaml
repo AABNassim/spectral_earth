@@ -1,5 +1,5 @@
 _target_: src.datamodules.enmap_treemap.EnMAPTreeMapDataModule
-root: /dss/dsstbyfs02/pn49cu/pn49cu-dss-0001/enmap_data_final/spectral_earth/
+root: ${paths.data_dir}/enmap_treemap/
 sensor: "enmap"
 classes: [0, 184, 185, 221, 924, 105, 503, 520, 706, 801, 201, 264, 266, 281, 301, 901, 406, 923, 142, 161, 602, 607, 608, 267, 371]
 num_bands: 202
