@@ -178,7 +178,7 @@ class MAEModule(LightningModule):
         if backbone_name in BACKBONE_REGISTRY:
             vit = BACKBONE_REGISTRY[backbone_name](token_patch_size=token_patch_size)
         else:
-            vit = timm.create_model(backbone_name, in_chans=in_channels, num_classes=0, pretrained=False)
+            vit = timm.create_model(backbone_name, in_chans=in_channels, img_size=patch_size, patch_size=token_patch_size, num_classes=0, pretrained=False)
         
         # If the backbone is a custom ViT (i.e. has vit_core), wrap it.
         if hasattr(vit, "vit_core"):
