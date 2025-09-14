@@ -146,6 +146,28 @@ class SpecVisionTransformer(nn.Module):
         """
         return self.vit_core.head
 
+class SpecViTTiny(SpecVisionTransformer):
+    """Tiny variant of the Spectral Vision Transformer.
+    
+    This is a tiny version of the Spectral Vision Transformer with:
+    - embed_dim=192
+    - depth=12
+    - num_heads=3
+    """
+    def __init__(self, **kwargs):
+        """Initialize the Tiny Spectral Vision Transformer.
+        
+        Args:
+            **kwargs: Additional arguments passed to the SpecVisionTransformer.
+        """
+        super().__init__(
+            embed_dim=192,
+            depth=12,
+            num_heads=3,
+            mlp_ratio=4,
+            **kwargs
+        )
+
 
 class SpecViTSmall(SpecVisionTransformer):
     """Small variant of the Spectral Vision Transformer.
